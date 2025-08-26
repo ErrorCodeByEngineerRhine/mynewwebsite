@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rhine Pateño – Resume</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  :root {
+    --bg-light: #e0f0ff;             /* light version of blue-gray */
+    --bg-dark:linear-gradient(135deg, #131D4F, #254D70);              /* main dark background */
+    --container-light: #ffffff;      /* light container for light mode */
+    --container-dark: #192859;       /* dark container slightly brighter than bg */
+    --text-light: #1a1a1a;           /* text on light bg */
+    --text-dark: #dce9f8;            /* light text on dark bg */
+    --accent: #4FC3F7;               /* cyan accent for headers/links */
+    --border-dark: #1F3D5A;          /* darker border on dark bg */
+    --border-light: #ccd9e6;         /* soft border on light bg */
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    padding: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .light-mode body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+  }
+
+  .resume-container {
+    max-width: 900px;
+    margin: auto;
+    background: var(--container-dark);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(79, 195, 247, 0.05);
+    border: 1px solid var(--border-dark);
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .light-mode .resume-container {
+    background: var(--container-light);
+    border: 1px solid var(--border-light);
+  }
+
+  h1, h2, h3 {
+    color: var(--accent);
+  }
+
+  .name-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .contact-info {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    color: #a2b9d1;
+  }
+
+  .light-mode .contact-info {
+    color: #555;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #4FC3F7;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+
+  .two-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .two-col > div {
+    flex: 0 0 48%;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  button#toggleTheme {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  -webkit-user-drag: none;
+}
+
+
+  @media print {
+    body {
+      background: white;
+      color: black;
+    }
+    .resume-container {
+      background: white;
+      color: black;
+      box-shadow: none;
+      border: none;
+    }
+    a {
+      color: black;
+    }
+    button#toggleTheme {
+      display: none;
+    }
+  }
+
+  /* Floating Home Button */
+.home-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #161179;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  z-index: 10000;
+}
+
+.home-btn::after {
+  font-size: 1.5rem;
+  color: #E5EFFF;
+  transition: transform 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #3B82F6;
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.8);
+}
+
+.home-btn:hover::after {
+  transform: translateY(-3px);
+}
+
+.home-btn::before {
+  content: "Return Home";
+  position: absolute;
+  bottom: 75px;
+  background: #3B82F6;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.home-btn:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-btn" aria-label="Return Home"></a>
+  <button id="toggleTheme" aria-label="Toggle Dark/Light Mode">🌙 Toggle Theme</button>
+
+  <div class="resume-container">
+    <header class="name-title">
+      <h1>Rhine Pateño</h1>
+      <p>Computer Engineer & Certified Safety Officer II</p>
+    </header>
+
+    <div class="contact-info">
+      <p>Email: patenorhine@gmail.com | Phone: +6392-8854-2263 | Location: Pangasinan, Philippines</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/rhine-pateño-60bb13360" target="_blank">linkedin.com/in/rhine</a> | GitHub: <a href="https://github.com/engrrhine" target="_blank">github.com/engrrhine</a></p>
+    </div>
+
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p>
+        As a Computer Engineering graduate specializing in System and Network Administration, 
+        and a certified BOSH Training Practitioner with a foundation in Cybersecurity, I offer a solid and versatile IT skill set.
+        My academic background, reinforced by practical experience, allows me to solve complex technical challenges with precision. 
+        Through leadership roles at Pangasinan State University Urdaneta City Campus, I developed strong skills in team coordination, strategic planning, and effective communication. This blend of technical expertise and leadership experience enables me to contribute effectively in dynamic, high-pressure environments.
+      </p>
+    </section>
+
+<section>
+  <h2 class="section-title">Experience</h2>
+
+  <ul>
+    <li>
+      <strong>Guest Experience Leader and Crew – McDonald’s Villasis</strong>  
+      <br><em>March 2024 – May 2025</em>  
+      <p>
+        Delivered exceptional frontline service in a fast-paced environment while leading customer satisfaction initiatives as a Guest Experience Leader.  
+        Handled daily operations, resolved service issues, and ensured customer delight through proactive interaction and teamwork.
+      </p>
+    </li>
+
+    <li>
+      <strong>Geographic Information Systems Analyst Intern – LGU Mapping Project</strong>  
+      <br><em>January 2024 – March 2024</em>  
+      <p>
+        Contributed to GIS data collection and spatial analysis for infrastructure planning and land use.  
+        Used mapping tools to digitize assets, validate geographic coordinates, and assist in creating a digital profile of the local area.
+      </p>
+    </li>
+  </ul>
+</section>
+
+
+    <section>
+      <h2 class="section-title">Skills</h2>
+      <ul>
+        <li>Cybersecurity & Penetration Testing</li>
+        <li>AI Model Development & Data Analysis</li>
+        <li>Cloud Infrastructure (AWS, Azure basics)</li>
+        <li>Linux System Administration & Networking</li>
+        <li>Embedded Systems (Raspberry Pi, Arduino)</li>
+        <li>Technical Documentation & Safety Compliance</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <p><strong>Pangasinan State University – Urdaneta City Campus</strong><br/>
+      Bachelor of Science in Computer Engineering – Major in System Network Administration<br/>
+      <em>August 2025</em></p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Certifications</h2>
+      <ul>
+        <li>Master ChatGPT - UniAthena Global</li>
+        <li>Certified Safety Officer – Basic Occupational Safety and Health (BOSH)</li>
+        <li>Cybersecurity Essentials – Cisco Networking Academy</li>
+        <li>Linux Unhatched – Cisco Networking Academy</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">Leadership & Affiliations</h2>
+      <ul>
+        <li>Press Relations Officer | Federated Graduating Officer, Pangasinan State University Urdaneta City Campus | A.Y 2024-2025 </li>
+        <li>Press Relations Officer | Computer Engineering Graduating Officer, Pangasinan State University Urdaneta City Campus | A.Y. 2024-2025 | </li>
+        <li>Computer Engineering Representative | Supreme Student Council, Pangasinan State University Urdaneta City Campus | A.Y. 2024-2025</li>
+        <li>Business Manager | College of Engineering and Architecture, Pangasinan State University Urdaneta City Camous | A.Y 2024-2025</li>
+        <li>Assistant Secretary | Institute of Computer Engineers of the Philippines.Student Edition, PSU UCC | A.Y. 2023-2024</li>
+        <li>3rd Year Representative | Peer Facilitator Circle | A.Y. 2022-2023 </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">Projects</h2>
+      <div class="two-col">
+        <div>
+          <h3>Capstone Project: Game-Based Learning Approach Using Raspberry Pi Cyberdeck Pac-Man | Pangasinan State University 2025 </h3>
+          <p>Engineered a modified Pac-Man game integrated with simulated cybersecurity threats—such as malware behavior, network breaches, and system vulnerabilities—to serve as an interactive Game-Based Learning platform.  
+  Designed to help students grasp core cybersecurity concepts in a gamified, hands-on environment using Raspberry Pi and command-line utilities.</p>
+        </div>
+        <div>
+          <h3>Co-Developer: Real-Time Structural Health Monitoring System</h3>
+          <p>Developed an intelligent structural health monitoring system using Arduino, IoT sensors, and a web interface to assess building integrity in real time.  
+  The system continuously evaluates stress, vibration, and environmental conditions to determine whether a structure remains safe for occupancy or requires inspection.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer style="text-align:center; margin-top: 2rem; font-size: 0.85rem; color: #777;">
+      &copy; 2025 Engineer Rhine. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('toggleTheme');
+    toggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('light-mode');
+      toggle.textContent = document.documentElement.classList.contains('light-mode') ? '🌙 Dark Mode' : '☀️ Light Mode';
+    });
+  </script>
+  <script>
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+</script>
+<script>
+  // Disable Ctrl+U
+  document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey && e.key === 'u') {
+      e.preventDefault();
+    }
+    // Disable F12
+    if (e.key === "F12") {
+      e.preventDefault();
+    }
+    // Disable Ctrl+Shift+I (DevTools)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+      e.preventDefault();
+    }
+    document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+  });
+</script>
+</body>
+</html>

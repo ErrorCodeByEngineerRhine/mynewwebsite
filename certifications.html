@@ -1,0 +1,24 @@
+<script>
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+</script>
+<script>
+  // Disable Ctrl+U
+  document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey && e.key === 'u') {
+      e.preventDefault();
+    }
+    // Disable F12
+    if (e.key === "F12") {
+      e.preventDefault();
+    }
+    // Disable Ctrl+Shift+I (DevTools)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+      e.preventDefault();
+    }
+    document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+  });
+</script>

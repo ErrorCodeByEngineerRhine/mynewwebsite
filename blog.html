@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engr. Rhine | Thoughts on Technology, Systems, and Cybersecurity</title>
+  <meta name="description" content="Insights from Engr. Rhine – Expert in UI/UX, cybersecurity, and digital systems." />
+  <meta name="author" content="Rhine Pateño" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0F172A;
+      color: #ffffff;
+      line-height: 1.8;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      color: #3B82F6;
+      font-size: 2.5rem;
+    }
+
+    .blog-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .blog-post {
+      background-color: #1E293B;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-post:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 20px rgba(96, 165, 250, 0.25);
+    }
+
+    .blog-post h2 {
+      color: #60A5FA;
+      margin-bottom: 1rem;
+    }
+
+    .blog-post p {
+      color: #E2E8F0;
+    }
+
+    .blog-post .read-more {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #3B82F6;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .blog-post .read-more:hover {
+      color: #2563EB;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      color: #94A3B8;
+      font-size: 0.9rem;
+    }
+
+    /* Floating Home Button */
+.home-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #161179;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  z-index: 10000;
+}
+
+.home-btn::after {
+  font-size: 1.5rem;
+  color: #E5EFFF;
+  transition: transform 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #3B82F6;
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.8);
+}
+
+.home-btn:hover::after {
+  transform: translateY(-3px);
+}
+
+.home-btn::before {
+  content: "Return Home";
+  position: absolute;
+  bottom: 75px;
+  background: #3B82F6;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.home-btn:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-btn" aria-label="Return Home"></a>
+  <header>
+    <h1>Thoughts on Technology, Systems, and Cybersecurity</h1>
+    <p>Exploring UX Design, Cybersecurity Trends, System Architecture, and Leadership in Tech</p>
+  </header>
+
+  <main class="blog-container">
+    <!-- Original Articles -->
+    <article class="blog-post">
+      <h2>Designing with Empathy: UX That Connects</h2>
+      <p>True user experience design is rooted in understanding your users' needs, goals, and frustrations. Here’s how I approach user journey mapping and interaction design with empathy and clarity.</p>
+      <a class="read-more" href="#" onclick="showForbidden()">Read More</a>
+    </article>
+
+    <article class="blog-post">
+      <h2>Balancing Security with Usability</h2>
+      <p>Security shouldn’t feel like a roadblock. Discover how I architect solutions that are both secure and user-friendly, ideal for high-stakes environments like universities or SMEs.</p>
+      <a class="read-more" href="#" onclick="showForbidden()">Read More</a>
+    </article>
+
+    <article class="blog-post">
+      <h2>Smart Systems on a Budget: Real-World Raspberry Pi Applications</h2>
+      <p>From smart monitoring to campus-wide automation, explore practical and affordable innovations using the Raspberry Pi that I’ve implemented for real institutions.</p>
+      <a class="read-more" href="#" onclick="showForbidden()">Read More</a>
+    </article>
+
+    <!-- New Conceptual Topics -->
+    <article class="blog-post">
+      <h2>Project GOD’S EYE: Vision-Based Threat Detection</h2>
+      <p>A conceptual surveillance system that uses computer vision and real-time AI to track human behavior, detect anomalies, and log potential threats. Imagine image processing with situational awareness.</p>
+      <a class="read-more" href="#" onclick="showForbidden()">Read More</a>
+    </article>
+
+    <article class="blog-post">
+      <h2>Game-Based Learning for Cybersecurity Education</h2>
+      <p>Transforming ICT classrooms into interactive simulations—this approach empowers students to understand real cyberattacks using gamified Linux tools, command-line hacking, and logic-based challenges.</p>
+      <a class="read-more" href="cybersecurity-gbl.html">Read More</a>
+    </article>
+
+    <article class="blog-post">
+      <h2>Mastering ChatGPT for Automation, Coaching & Research</h2>
+      <p>Beyond prompts—see how I use ChatGPT as a UI advisor, document formatter, code assistant, and idea accelerator for academic, technical, and personal growth workflows.</p>
+      <a class="read-more" href="#" onclick="showForbidden()">Read More</a>
+    </article>
+
+    <article class="blog-post">
+      <h2>Safety Officer 2.0: AI in Workplace Risk Prevention</h2>
+      <p>As a certified Safety Officer, I’ve begun designing AI solutions to predict hazards, automate inspections, and reduce incident response times. Welcome to the digital safety revolution.</p>
+      <a class="read-more" href="#" onclick="showForbidden()">Read More</a>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2025 Engr. Rhine. All rights reserved.
+  </footer>
+
+  <!-- Forbidden Access Handler -->
+  <script>
+    function showForbidden() {
+      alert("403 - Access Forbidden.\nThis content is currently restricted.");
+    }
+  </script>
+
+  <!-- Security Scripts -->
+  <script>
+    // Disable right-click
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+
+    // Disable key shortcuts (DevTools & Source)
+    document.addEventListener("keydown", function (e) {
+      if (
+        (e.ctrlKey && e.key.toLowerCase() === 'u') ||  // Ctrl+U
+        (e.key === "F12") ||                            // F12
+        (e.ctrlKey && e.shiftKey && ['i', 'c', 'j'].includes(e.key.toLowerCase())) // Ctrl+Shift+I/C/J
+      ) {
+        e.preventDefault();
+      }
+    });
+
+    // Block text selection (left click highlight + copy)
+    document.addEventListener("selectstart", function (e) {
+      e.preventDefault();
+    });
+
+    // Block copy events
+    document.addEventListener("copy", function (e) {
+      e.preventDefault();
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Me | Engr. Rhine</title>
+  <meta name="description" content="Get in touch with Engineer Rhine – Certified Computer Engineer and Safety Officer II.">
+  <meta name="author" content="Rhine Pateño">
+  <link rel="icon" href="favicon.ico" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0F172A;
+      color: #fff;
+      line-height: 1.6;
+      padding: 2rem;
+      user-select: none;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #4FC3F7;
+      margin-bottom: 2rem;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 1rem;
+    }
+
+    .contact-item {
+      background-color: #1E293B;
+      padding: 1rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .contact-item strong {
+      display: block;
+      font-weight: 600;
+      color: #7DD3FC;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-item a {
+      color: #E0F2FE;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-form {
+      background-color: #1E1E2F;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #e0e0e0;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #334155;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #bbb;
+    }
+
+    .contact-form button {
+      background: #3B82F6;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #2563EB;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .contact-form {
+        padding: 1.2rem;
+      }
+    }
+
+    /* Floating Home Button */
+    .home-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #161179;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      z-index: 10000;
+    }
+
+    .home-btn::after {
+      font-size: 1.5rem;
+      color: #E5EFFF;
+      transition: transform 0.3s ease;
+    }
+
+    .home-btn:hover {
+      background-color: #3B82F6;
+      box-shadow: 0 0 15px rgba(79, 195, 247, 0.8);
+    }
+
+    .home-btn:hover::after {
+      transform: translateY(-3px);
+    }
+
+    .home-btn::before {
+      content: "Return Home";
+      position: absolute;
+      bottom: 75px;
+      background: #3B82F6;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .home-btn:hover::before {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Contact Me</h1>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <strong>Email</strong>
+        <a href="mailto:patenorhine@gmail.com">patenorhine@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <strong>Phone</strong>
+        <a href="tel:+639288542263">+63 928 854 2263</a>
+      </div>
+      <div class="contact-item">
+        <strong>Facebook</strong>
+        <a href="#">Rhine Pateño</a>
+      </div>
+      <div class="contact-item">
+        <strong>LinkedIn</strong>
+        <a href="https://www.linkedin.com/in/rhine-pateño-60bb13360" target="_blank">linkedin.com/in/rhine-pateño</a>
+      </div>
+      <div class="contact-item">
+        <strong>Instagram</strong>
+        <a href="#">Rhine Ferrer</a>
+      </div>
+    </div>
+
+    <h2>Send a Message</h2>
+    <form class="contact-form" action="https://formspree.io/f/xqabrgba" method="POST">
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required placeholder="Type your message..."></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Engineer Rhine. All rights reserved.
+  </footer>
+
+  <!-- Floating Home Button -->
+  <a href="index.html" class="home-btn" aria-label="Return Home"></a>
+
+  <!-- Site Protection Scripts -->
+  <script>
+    document.addEventListener("contextmenu", e => e.preventDefault());
+
+    document.addEventListener("keydown", function (e) {
+      if (
+        (e.ctrlKey && e.key.toLowerCase() === 'u') ||
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ['i', 'j', 'c'].includes(e.key.toLowerCase()))
+      ) {
+        e.preventDefault();
+      }
+    });
+
+    document.addEventListener("selectstart", function (e) {
+      if (!e.target.closest('input, textarea, button, select')) {
+        e.preventDefault();
+      }
+    });
+
+    document.addEventListener("mousedown", function (e) {
+      if (e.button === 2) {
+        e.preventDefault();
+      }
+    });
+  </script>
+
+</body>
+</html>

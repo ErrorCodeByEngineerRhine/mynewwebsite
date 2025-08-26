@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | Engr. Rhine</title>
+  <meta name="description" content="Professional engineering and cybersecurity services by Engineer Rhine. Specializing in Python, coding tutorials, network troubleshooting, and penetration testing.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon.ico" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0F172A;
+      color: #ffffff;
+      line-height: 1.6;
+      -webkit-user-select: none; /* Safari */
+      -moz-user-select: none;    /* Firefox */
+      -ms-user-select: none;     /* IE10+/Edge */
+      user-select: none;         /* Standard */
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #60A5FA;
+      margin-bottom: 1rem;
+    }
+
+    .service-category {
+      margin-top: 3rem;
+      background-color: #1E293B;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(96, 165, 250, 0.2);
+    }
+
+    .service-category h3 {
+      color: #3B82F6;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    ul.services-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .services-list li {
+      margin-bottom: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-left: 4px solid #60A5FA;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-top: 3rem;
+    }
+    /* Floating Home Button */
+.home-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #161179;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  z-index: 10000;
+}
+
+.home-btn::after {
+  font-size: 1.5rem;
+  color: #E5EFFF;
+  transition: transform 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #3B82F6;
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.8);
+}
+
+.home-btn:hover::after {
+  transform: translateY(-3px);
+}
+
+.home-btn::before {
+  content: "Return Home";
+  position: absolute;
+  bottom: 75px;
+  background: #3B82F6;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.home-btn:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+    
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-btn" aria-label="Return Home"></a>
+  <div class="container">
+    <h1>My Services</h1>
+    <p style="text-align:center; max-width: 700px; margin: 0 auto;">
+      I provide expert engineering and digital solutions rooted in precision, innovation, and practical application. Whether you're a student seeking guidance, a professional aiming to enhance your workflow, or a team in need of reliable technical support, I deliver tailored, secure, and results-driven services to meet your specific needs
+    </p>
+
+    <div class="service-category">
+      <h3>Coding Tutorials & Academic Assistance</h3>
+      <ul class="services-list">
+        <li>1-on-1 tutoring for beginners in Python, C++, and Java</li>
+        <li>Capstone and thesis project consultation (with code review)</li>
+        <li>Assignment debugging, optimization, and logic guidance</li>
+        <li>Hands-on lessons in Git/GitHub, terminal commands, and IDE use</li>
+      </ul>
+    </div>
+
+    <div class="service-category">
+      <h3>Python Development</h3>
+      <ul class="services-list">
+        <li>GUI-based tools and intelligent calculators (Tkinter, PyQt)</li>
+        <li>Web scraping, automation scripts, and API integration</li>
+        <li>Custom grading systems, data visualization, and table scorers</li>
+        <li>Raspberry Pi projects (CyberDecks, Linux commands, GPIO)</li>
+      </ul>
+    </div>
+    
+    <div class="service-category">
+      <h3>Network Support & Troubleshooting</h3>
+      <ul class="services-list">
+        <li>Home and campus network configuration & diagnostics</li>
+        <li>Router/firewall basic setup and IP management</li>
+        <li>Linux server administration and system hardening</li>
+        <li>VLAN, DNS, and NAT issue resolution (Cisco, Packet Tracer)</li>
+      </ul>
+    </div>
+
+    <div class="service-category">
+      <h3>Penetration Testing & Cybersecurity</h3>
+      <ul class="services-list">
+        <li>Basic penetration testing with Kali Linux</li>
+        <li>Vulnerability scanning, footprinting, and enumeration</li>
+        <li>Educational PACMAN virus simulation (for students only)</li>
+        <li>Safe ethical hacking walkthroughs for training purposes</li>
+      </ul>
+    </div>
+          <div class="service-category">
+      <h3>Artificial Intelligence Solutions</h3>
+      <ul class="services-list">
+        <li>Custom AI model development for automation and analytics</li>
+        <li>Chatbot integration and NLP systems using Python (e.g., ChatGPT APIs)</li>
+        <li>Image classification, prediction systems, and data modeling</li>
+        <li>Support in academic AI projects and thesis implementation</li>
+      </ul>
+    </div>
+        <div class="service-category">
+      <h3>Safety Officer Services</h3>
+      <ul class="services-list">
+        <li>Basic Occupational Safety and Health (BOSH) consultation</li>
+        <li>On-site safety risk assessments and incident reporting system setup</li>
+        <li>Development of safety checklists, protocols, and emergency plans</li>
+        <li>Educational training on safety compliance and digital monitoring tools</li>
+      </ul>
+    </div>
+    <div class="service-category">
+  <h3>Data Analytics & Data Engineering</h3>
+  <ul class="services-list">
+    <li>Data pipeline design and ETL process implementation</li>
+    <li>Data cleaning, transformation, and real-time processing</li>
+    <li>Exploratory data analysis (EDA) and dashboard reporting</li>
+    <li>SQL-based querying, dataset management, and data warehousing (e.g., BigQuery, PostgreSQL)</li>
+    <li>Consultation for thesis or business cases involving data-driven solutions</li>
+  </ul>
+</div>
+<div class="service-category">
+  <h3>UI & UX Design Services</h3>
+<ul class="services-list">
+  <li>User interface design for web and mobile applications (Figma, Adobe XD)</li>
+  <li>Creation of wireframes, mockups, and interactive prototypes</li>
+  <li>User experience research, journey mapping, and persona development</li>
+  <li>UI kits and component system creation for scalable design</li>
+  <li>Usability testing, design iteration, and accessibility optimization</li>
+</ul>
+</div>
+<div class="service-category">
+  <h3>Administrative & Office Services</h3>
+  <ul class="services-list">
+    <li>Document preparation (memos, minutes, reports, resolutions)</li>
+    <li>Official communications writing (professional email and letter drafting)</li>
+    <li>Presentation and deck creation for meetings or conferences</li>
+    <li>Organizational planning and digital workflow setup</li>
+    <li>Assistance in event documentation, compliance, and digital record keeping</li>
+  </ul>
+</div>
+  </div>
+  
+
+  <footer>
+    &copy; 2025 Engr. Rhine. All rights reserved.
+  </footer>
+
+  <!-- 🔒 Protection Scripts -->
+  <script>
+    // Disable right-click context menu
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+
+    // Disable specific key combinations
+    document.addEventListener("keydown", function (e) {
+      // Ctrl+U
+      if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+        e.preventDefault();
+      }
+      // F12
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
+      // Ctrl+Shift+I
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+        e.preventDefault();
+      }
+      // Ctrl+Shift+C
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'c') {
+        e.preventDefault();
+      }
+      // Ctrl+Shift+J
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
+        e.preventDefault();
+      }
+    });
+  </script>
+  <script>
+  // Block text selection
+  document.addEventListener('selectstart', function (e) {
+    e.preventDefault();
+  });
+</script>
+</body>
+</html>
